@@ -1,6 +1,13 @@
-module CCurl  [system] {
+module CCurlMac [system] {
 	header "shim.h"
-	header "/usr/include/curl/curl.h"
+	header "/usr/local/include/curl/curl.h"
 	link "curl"
 	export *
+}
+
+module CCurlLinux [system] {
+    header "shim.h"
+    header "/usr/include/curl/curl.h"
+    link "curl"
+    export *
 }
